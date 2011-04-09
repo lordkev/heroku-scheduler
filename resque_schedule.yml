@@ -1,5 +1,5 @@
 send_apns:
   cron: */1 * * * *
-  class: "Jobs::APN::DeliverNotifications"
+  class: "APNDeliverNotificationsJob"
   queue: 
   description: Send APNs
