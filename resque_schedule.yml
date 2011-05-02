@@ -1,5 +1,10 @@
 send_apns:
   cron: */1 * * * *
   class: "APNDeliverNotificationsJob"
-  queue: apn
+  queue: apn_notifications
   description: Send APNs
+process_feedback:
+  cron: 0 5 * * *
+  class: "APNProcessFeedbackJob"
+  queue: apn_feedback
+  description: Process feedback
